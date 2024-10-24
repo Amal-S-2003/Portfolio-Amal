@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    /* font-family: "Pacifico", cursive; */
+    /* font-family: "Lato", sns-serif; */
+    font-family: "Rubik", sans-serif;
+
+}
+
+:root {
+    --light-grey: #c8cfd6;
+    --dark-grey: #263549;
+    --medium-grey: #4d5e6e;
+    --dark-color: #112234;
+}
+
+/* Navbar */
+nav h1 {
+    color: var(--dark-color);
+}
+
+nav ul li {
+    color: var(--dark-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+nav a {
+    text-decoration: none;
+    /* color: var(--dark-color); */
+    color: inherit;
+}
+
+nav ul li:hover {
+    /* background-color: var(--light-grey); */
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.fa-solid {
+    display: none;
+    pointer-events: none;
+}
+
+/* ======HOME====== */
+#home {
+    display: flex;
+    height: 90vh;
+}
+
+#home .hello {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home .hello h1 {
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--dark-color);
+    text-shadow: 8px 8px 2px var(--light-grey);
+
+
+}
+
+#home .hello h5 {
+    color: var(--medium-grey);
+}
+
+#home .img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home img {
+    width: 100%;
+}
+
+/* About me */
+#aboutme p {
+    color: var(--medium-grey);
+}
+
+#aboutme .row span {
+    color: var(--dark-color);
+}
+
+/* Services */
+
+#services .img {
+    background-color: var(--light-grey);
+}
+
+#services img {
+    width: 100%;
+}
+
+#services .card {
+    transition: 0.6s;
+}
+
+#services .card:hover {
+    scale: 1.05;
+}
+
+/* 
+#services .card:not(:hover){
+    filter: grayscale(1);
+} */
+@media only screen and (max-width: 760px) {
+    nav ul {
+        position: fixed;
+        width: 300px;
+        flex-direction: column;
+        background: var(--light-grey);
+        right: -300px;
+        top: 0;
+        height: 100vh;
+        transition: .6s;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .fa-xmark {
+        margin-left: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        pointer-events: all;
+    }
+
+    
+
+    /* Home */
+    #home{
+        height: fit-content;
+    }
+    #home .hello h1 {
+        font-size: 40px;
+    }
+    #home .hello #dev p{
+        font-size: 10px;
+    }
+
+}
